@@ -1,4 +1,4 @@
-# helenmiamiimoontarotandastro
+# HelenMiamiiMoonTarotandAstro
 
 This is a responsive, simple, and creative website for my Tarot and Astrology brand "Helen Miamii Moon". I feel this site can be a great template for any Artist that offers a service and is looking to streamline the booking process for their clients.
 
