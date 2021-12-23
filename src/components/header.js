@@ -1,33 +1,18 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import Circle from "./circle"
+import Navbar from "react-bootstrap/Navbar"
+import Container from "react-bootstrap/Container"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <header>
+  <Navbar expand="lg" fixed="top">
+  <Container className="justify-content-center" fluid>
+  <div className="desktop"><Circle text="Helen Miamii Moon" arc={300} radius={100} /></div>
+  <div className="mobile"><Circle text="Helen Miamii Moon" arc={300} radius={82} /></div>
+  <div className="moon"></div>
+  </Container>
+  </Navbar>
   </header>
 )
 
@@ -36,7 +21,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `Helen Miamii Moon`,
 }
 
 export default Header

@@ -1,28 +1,20 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Intro from "../components/intro.js"
+import AboutTicker from "../components/aboutticker.js"
+import BookSection from "../components/book.js"
+import MeTicker from "../components/meticker.js"
+import TarotDeck from "../components/tarotdeck.js"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <Seo title="Helen Miamii Moon - Tarot Reader, Astrologer, and Mystical Creator" />
+    <Intro/>
+    <AboutTicker/>
+    <BookSection/>
+    <MeTicker/>
+    <TarotDeck/>
   </Layout>
 )
 
