@@ -1,7 +1,48 @@
-# HelenMiamiiMoonTarotandAstro
+# Helen Miamii Moon Tarot and Astro Gatsby Theme 🔮 
 
-This is a responsive, simple, and creative website for my Tarot and Astrology brand "Helen Miamii Moon". This site can be a great template for an Artist that offers bookable services and is looking to streamline that booking process for their clients.
+This is a responsive, simple, and elegant website for my Tarot and Astrology brand "Helen Miamii Moon". This theme is a great template for an Artist that offers bookable services and is looking to streamline that booking process for their clients.
 
-This website is built on Gatsby.js using React and React-Bootstrap.
+This website is altered from a Gatsby Starter Theme using React and React-Bootstrap.
 
-I used Square Appointments to create the Customer Booking feature. It's in a modal activated by a button that says "Book Your Sesh". To replace this with your own Square Appointments account, start by creating an Advance Widget in your Square Appointments account. Only copy the href url in the entire code generated for you (doesn't matter which one). Go to your directory, "../src/components", open the square.js file, then paste the link as the script.src. Viola!
+## Square Appointments
+The Customer Self-Booking feature uses the [Square Appointments](https://squareup.com/us/en/appointments) widget. It is activated in a modal by the ` <Button/> ` found in  ` src/components/reading.js `
+
+Update the `script.src=` in ` src/components/square.js ` with your own Square Appointments widget src link. 
+
+### Square Appointments Widget Link Example:
+```
+https://square.site/appointments/buyer/widget/[YOUR OWN UNIQUE SQUARE CODE]/[YOUR OWN UNIQUE SQUARE CODE].js
+```
+
+### Example Usage:
+```
+import React, {Component} from "react"
+import Spinner from "react-bootstrap/Spinner"
+
+class Square extends Component {
+
+  componentDidMount() {
+      const script = document.createElement("script");    
+      script.async = true;    
+      script.src = "https://square.site/appointments/buyer/widget/[YOUR OWN UNIQUE SQUARE CODE]/[YOUR OWN UNIQUE SQUARE CODE].js";    
+      this.div.appendChild(script); 
+    }
+   
+  render() {
+    return (
+      <div className="text-center">
+      <Spinner animation="grow" role="status"><span className="visually-hidden">Loading...</span></Spinner>
+      <div className="app" ref={el => (this.div = el)}>
+          {/* Script is inserted here */}
+      </div>
+      </div>
+      );
+    }
+  }
+
+
+export default Square;
+
+```
+
+I'm currently working on a CSS file to !Important the Square Appointments Widget CSS  "on brand".
