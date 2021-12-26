@@ -45,4 +45,4 @@ export default Square;
 
 ```
 
-I'm currently working on a CSS file to !Important the Square Appointments Widget CSS  "on brand".
+I'm currently working on a CSS file to override (!Important) the Square Appointments Widget CSS to make the widget feel more "on brand". Coming soon.
