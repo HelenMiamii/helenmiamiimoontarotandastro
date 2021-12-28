@@ -14,7 +14,6 @@ const IndexPage = () => (
     <AboutTicker/>
     <BookSection/>
     <MeTicker/>
-    <TarotDeck/>
   </Layout>
 )
 
